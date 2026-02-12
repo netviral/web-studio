@@ -27,6 +27,8 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     // Disable source maps for smaller production builds
     sourcemap: false,
+    outDir:"docs",
+
   },
   // Optimize dependencies
   optimizeDeps: {
