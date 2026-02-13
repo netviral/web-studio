@@ -18,8 +18,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    /* background: var(--border-glass); */
+    border: 1px solid var(--border-accent-20);
     border-radius: var(--radius-full);
     font-size: 0.8rem;
     font-weight: 600;
@@ -121,7 +121,7 @@
 .step-number {
     font-size: 3rem;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.2);
+    color: var(--btn-bg-secondary);
     font-family: 'Space Grotesk', sans-serif;
     flex-shrink: 0;
 }
@@ -161,7 +161,7 @@
 
 .features {
     background: transparent;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
 }
 
 .section-header {
@@ -192,7 +192,7 @@
 
 .process {
     background: transparent;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
 }
 
 .process-steps {
@@ -220,7 +220,7 @@
 
 .testimonials {
     background: transparent;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
 }
 
 .testimonials-grid {
@@ -260,13 +260,13 @@
 
 .cta-section {
     background: transparent;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
 }
 
 .cta-card {
     text-align: center;
     padding: var(--spacing-2xl);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-accent-40);
 }
 
 .cta-card h2 {
@@ -291,8 +291,8 @@
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding-top: 120px;
-        padding-bottom: var(--spacing-2xl);
+        padding-top: 100px;
+        padding-bottom: var(--spacing-xl);
     }
 
     .hero-cta {
@@ -319,4 +319,122 @@
     .cta-buttons {
         flex-direction: column;
     }
+
+    .gap-padding {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .gap-title {
+        font-size: 1.75rem;
+    }
+
+    .pillar-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Gap Section Specific Styles */
+.gap-card {
+    border: 1px solid var(--accent-indigo-dim) !important;
+    background: var(--bg-secondary) !important;
+    /* Fixed dark background for depth */
+}
+
+.gap-padding {
+    padding: 3rem;
+}
+
+.error-badge {
+    background: var(--error-bg);
+    border-color: var(--error-border);
+    color: var(--error-primary);
+}
+
+.gap-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.text-error {
+    color: var(--error-primary);
+}
+
+.gap-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.gap-item-card {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-accent-15);
+}
+
+.gap-item-title {
+    color: var(--accent-primary);
+    margin-bottom: 0.25rem;
+}
+
+.gap-item-description {
+    font-size: 0.9rem;
+    opacity: var(--opacity-medium);
+}
+
+/* Logo Loop Wrapper */
+.logo-loop-wrapper {
+    background: transparent;
+    padding-bottom: 3rem;
+}
+
+/* Mission Section */
+.mission-title {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.mission-text {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+
+/* Pillar Cards */
+.pillar-card {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.pillar-icon-container {
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+    display: flex;
+    justify-content: center;
+}
+
+.pillar-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.pillar-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Industries Section */
+.industries-title {
+    margin-bottom: 3rem;
+}
+
+.industry-card {
+    padding: 1.5rem;
+}
+
+.industry-name {
+    font-weight: 600;
+    color: var(--text-primary);
 }

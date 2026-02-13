@@ -81,7 +81,7 @@ const Portfolio = () => {
             <section className="portfolio-hero section entry-anim">
                 <div className="container-wide">
                     <div className="portfolio-hero-content">
-                        <h1>Our Portfolio</h1>
+                        <h1>Our <span className="text-primary">Portfolio</span></h1>
                         <p className="hero-description">
                             Explore the high-performance MVPs we've built for ambitious founders.
                             From fintech to healthtech, we deliver scalable solutions ready for market.

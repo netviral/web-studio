@@ -2,33 +2,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Synchronized Indigo Palette */
-  /* --accent-primary: #6366f1; */
-  --accent-primary: #6544e8;
-  /* Main Indigo */
-  --accent-secondary: #4f46e5;
-  /* Slightly Darker Indigo */
-  --accent-light: #818cf8;
-  /* Light Indigo */
-  --accent-dim: rgba(99, 102, 241, 0.4);
 
-  --bg-glass: rgba(1, 1, 3, 0.95);
-  --bg-glass-hover: rgba(5, 5, 12, 1);
-  --border-glass: rgba(99, 102, 241, 0.1);
-  --border-glass-light: rgba(99, 102, 241, 0.3);
+  /* ============================================
+   COLOR PALETTE — GRAPHITE / STONE
+   Ultra Premium • Calm • Executive • Trustworthy
+   ============================================ */
 
-  --bg-primary: #010103;
-  --bg-secondary: #020206;
-  --bg-card: #030308;
-  --bg-tertiary: #04040a;
 
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  /* ============================================
+   ACCENTS
+   ============================================ */
 
-  --gradient-primary: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-light) 100%);
-  --gradient-subtle: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+  --accent-primary: #93c5fd;
+  --accent-secondary: #60a5fa;
+  --accent-light: #e0f2fe;
+  --accent-dim: rgba(224, 242, 254, 0.14);
 
+  /* Supporting accents */
+  --accent-indigo: #818cf8;
+  --accent-indigo-dim: rgba(129, 140, 248, 0.12);
+  --accent-cyan: #67e8f9;
+  --accent-cyan-dim: rgba(103, 232, 249, 0.1);
+  --accent-cyan-glow: rgba(103, 232, 249, 0.18);
+
+
+  /* ============================================
+   WARNING / ERROR
+   ============================================ */
+
+  --warning-bg: rgba(248, 113, 113, 0.07);
+  --warning-border: rgba(248, 113, 113, 0.16);
+  --warning-text: #fca5a5;
+
+  --error-primary: #f87171;
+  --error-bg: rgba(239, 68, 68, 0.07);
+  --error-border: rgba(239, 68, 68, 0.16);
+
+
+  /* ============================================
+   BACKGROUND HIERARCHY
+   (critical for premium feel)
+   ============================================ */
+
+  --bg-deep: #070708;
+  /* page edges */
+  --bg-primary: #0b0b0c;
+  /* main canvas */
+  --bg-secondary: #121214;
+  /* sections */
+  --bg-card: #18181b;
+  /* cards */
+  --bg-tertiary: #222226;
+  /* hover / raised */
+  --bg-accent-section: #101012;
+
+
+  /* ============================================
+   SITE BACKGROUND
+   ============================================ */
+
+  --bg-site-gradient-start: #2f2f35;
+  --bg-site-gradient-end: #0b0b0c;
+
+  --site-background:
+    radial-gradient(circle at 50% -30%, #3a3a42 0%, #161618 45%, #0b0b0c 75%) fixed;
+
+
+  /* ============================================
+   GLASS
+   (slightly warm to avoid "AI blue tint")
+   ============================================ */
+
+  --bg-glass: rgba(24, 24, 27, 0.55);
+  --bg-glass-hover: rgba(24, 24, 27, 0.75);
+
+
+  /* ============================================
+   BORDERS
+   ============================================ */
+
+  --border-glass: rgba(212, 212, 216, 0.10);
+  --border-glass-light: rgba(212, 212, 216, 0.18);
+
+  --border-accent-15: rgba(224, 242, 254, 0.08);
+  --border-accent-20: rgba(224, 242, 254, 0.14);
+  --border-accent-40: rgba(224, 242, 254, 0.22);
+
+  --border-white-05: rgba(255, 255, 255, 0.035);
+  --border-white-10: rgba(255, 255, 255, 0.06);
+  --border-white-15: rgba(255, 255, 255, 0.1);
+  --border-white-20: rgba(255, 255, 255, 0.14);
+
+
+  /* ============================================
+   TEXT
+   (soft contrast = expensive look)
+   ============================================ */
+
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-bright: #ffffff;
+
+
+  /* ============================================
+   BUTTONS
+   ============================================ */
+
+  --btn-bg-secondary: rgba(212, 212, 216, 0.05);
+  --btn-bg-secondary-hover: rgba(212, 212, 216, 0.1);
+
+
+  /* ============================================
+   OPACITY
+   ============================================ */
+
+  --opacity-dim: 0.28;
+  --opacity-medium: 0.68;
+
+
+  /* ============================================
+   GRADIENTS
+   ============================================ */
+
+  --gradient-primary:
+    linear-gradient(180deg, #93c5fd 0%, #60a5fa 100%);
+
+  --gradient-subtle:
+    linear-gradient(180deg, rgba(147, 197, 253, 0.035) 0%, transparent 70%);
+
+  --gradient-timeline:
+    linear-gradient(180deg, #60a5fa 0%, rgba(224, 242, 254, 0.08));
+
+
+  /* ============================================
+   GRID
+   ============================================ */
+
+  --grid-pattern-color: rgba(255, 255, 255, 0.1);
+  --grid-pattern-opacity: 0.2;
+  --grid-pattern-stroke-width: 0.3px;
+
+
+  /* ============================================
+   SCROLLBAR
+   ============================================ */
+
+  --scrollbar-thumb: rgba(161, 161, 170, 0.3);
+  --scrollbar-track: var(--bg-primary);
+
+
+  /* ============================================
+     SPACING SYSTEM
+     ============================================ */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
@@ -37,12 +163,19 @@
   --spacing-2xl: 6rem;
   --spacing-3xl: 8rem;
 
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
+  --radius-cta: 30px;
   --radius-full: 9999px;
 
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
   --transition-fast: 0.1s ease;
   --transition-base: 0.2s ease;
 }
@@ -55,15 +188,16 @@
 
 html,
 body {
-  background-color: #010103;
-  /* Prevent white flash or bleed */
+  background-color: var(--bg-deep);
+  /* Fix for swipe/scroll bleed */
   min-height: 100%;
   overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 html {
   /* Move background here so body::before can sit on top of it */
-  background: radial-gradient(circle at 50% -20%, #080c1a 0%, #010205 100%) no-repeat fixed;
+  background: var(--site-background);
   background-size: cover;
 }
 
@@ -77,7 +211,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle White SVG Grid Background */
+/* Global Grid Background - Controlled by variables in :root */
 body::before {
   content: '';
   position: fixed;
@@ -85,11 +219,17 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Grid pattern */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='white' stroke-width='0.5' stroke-opacity='0.1'/%3E%3C/svg%3E");
+  /* 
+     This uses CSS linear gradients to draw the lines. 
+     It is much more reliable than SVGs for responding to variables.
+  */
+  background-image:
+    linear-gradient(to right, var(--grid-pattern-color) var(--grid-pattern-stroke-width), transparent var(--grid-pattern-stroke-width)),
+    linear-gradient(to bottom, var(--grid-pattern-color) var(--grid-pattern-stroke-width), transparent var(--grid-pattern-stroke-width));
+  background-size: 40px 40px;
+  opacity: var(--grid-pattern-opacity);
   z-index: -1;
   pointer-events: none;
-  opacity: 1;
 }
 
 h1,
@@ -159,18 +299,18 @@ p {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--btn-bg-secondary);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-white-10);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--btn-bg-secondary-hover);
 }
 
 .card {
   background: var(--bg-secondary);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid var(--border-accent-15);
   border-radius: 12px;
   padding: var(--spacing-lg);
   transition: all 0.2s ease;
@@ -182,12 +322,13 @@ p {
 
 /* Specific Brighter States for Last Components */
 .cta-card {
-  border-color: rgba(99, 102, 241, 0.4) !important;
+  border-color: var(--border-accent-40) !important;
   /* Brighter default */
   background: var(--bg-secondary) !important;
   transition: all 0.2s ease;
   position: relative;
   z-index: 2 !important;
+  border-radius: var(--radius-cta) !important;
 }
 
 
@@ -291,34 +432,71 @@ textarea {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--scrollbar-thumb);
   border-radius: var(--radius-full);
+  border: 2px solid var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(161, 161, 170, 0.5);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-lg) 0;
+    /* Sleeker vertical breathing room */
+    border-bottom: 1px solid var(--border-white-05);
+  }
+
+  .section:last-of-type {
+    border-bottom: none;
+  }
+
+  .container,
+  .container-wide {
+    padding: 0 1rem;
+    /* Clean, consistent horizontal safe zones */
   }
 
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2.4rem, 12vw, 3.2rem);
+    margin-bottom: var(--spacing-md);
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
   }
+
+  /* Improved card spacing for mobile */
+  .card {
+    padding: var(--spacing-md) !important;
+  }
+
+  .cta-card {
+    border-radius: 12px !important;
+  }
+}
+
+.text-primary {
+  color: var(--accent-primary) !important;
+}
+
+.text-secondary {
+  color: var(--accent-secondary) !important;
 }

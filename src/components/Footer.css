@@ -1,7 +1,7 @@
 .footer {
-    background: #010103;
+    background: var(--bg-primary);
     /* Fully opaque to hide the grid */
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
     position: relative;
     z-index: 10;
@@ -47,7 +47,7 @@
 
 .footer-links-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-xl);
 }
 
@@ -79,7 +79,7 @@
 
 .footer-bottom {
     padding-top: var(--spacing-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--border-white-05);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -33,24 +33,31 @@ const Footer = () => {
 
                     <div className="footer-links-grid">
                         <div className="footer-column">
-                            <h4>Platform</h4>
-                            <Link to="/">Home</Link>
-                            <Link to="/portfolio">Portfolio</Link>
-                            <Link to="/pricing">Pricing</Link>
-                            <Link to="/contact">Contact</Link>
+                            <h4>Solutions</h4>
+                            <Link to="/services/web-apps">Web Applications</Link>
+                            <Link to="/services/mobile-apps">Mobile Apps</Link>
+                            <Link to="/services/marketing-sites">Marketing Sites</Link>
+                            <Link to="/services/ecommerce">E-Commerce</Link>
                         </div>
                         <div className="footer-column">
-                            <h4>Services</h4>
-                            <span>Web Development</span>
-                            <span>Mobile Apps</span>
-                            <span>AI Integration</span>
-                            <span>Strategy & UI/UX</span>
+                            <h4>Industries</h4>
+                            <Link to="/industries/healthcare">Healthcare</Link>
+                            <Link to="/industries/fintech">FinTech</Link>
+                            <Link to="/industries/edtech">Education</Link>
+                            <Link to="/industries/real-estate">Real Estate</Link>
+                        </div>
+                        <div className="footer-column">
+                            <h4>Company</h4>
+                            <Link to="/contact">About Us</Link>
+                            <Link to="/portfolio">Portfolio</Link>
+                            <Link to="/personas/agencies">For Partners</Link>
+                            <Link to="/contact">Careers</Link>
                         </div>
                         <div className="footer-column">
                             <h4>Legal</h4>
-                            <span>Privacy Policy</span>
-                            <span>Terms of Service</span>
-                            <span>Cookie Policy</span>
+                            <Link to="/">Privacy Policy</Link>
+                            <Link to="/">Terms of Service</Link>
+                            <Link to="/">Cookie Policy</Link>
                         </div>
                     </div>
                 </div>

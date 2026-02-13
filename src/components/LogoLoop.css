@@ -1,0 +1,50 @@
+.logo-loop-container {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 3rem 0;
+    position: relative;
+}
+
+@keyframes logoScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.logo-track {
+    display: flex;
+    gap: 6rem;
+    width: max-content;
+    animation: logoScroll 60s linear infinite;
+    will-change: transform;
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+.logo-icon {
+    color: var(--text-primary);
+}
+
+.logo-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.5px;
+}

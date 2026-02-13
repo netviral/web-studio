@@ -65,7 +65,7 @@ const Contact = () => {
             <section className="contact-hero section entry-anim">
                 <div className="container-wide">
                     <div className="contact-hero-content">
-                        <h1>Let's Build Something Amazing</h1>
+                        <h1>Let's Build Something <span className="text-primary">Amazing</span></h1>
                         <p className="hero-description">
                             Tell us about your vision. We'll turn it into reality.
                             Our team of experts is ready to provide a free consultation and a technical roadmap.
@@ -126,7 +126,7 @@ const Contact = () => {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="contact-form">
-                                    <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                                    <div className="form-row">
                                         <div className="form-group">
                                             <label htmlFor="name" style={{ marginBottom: '0.5rem', display: 'block', fontWeight: 'bold' }}>Full Name *</label>
                                             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" style={{ padding: '1.25rem' }} />
@@ -137,7 +137,7 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '1.5rem' }}>
+                                    <div className="form-row">
                                         <div className="form-group">
                                             <label htmlFor="company" style={{ marginBottom: '0.5rem', display: 'block', fontWeight: 'bold' }}>Company Name</label>
                                             <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Startup" style={{ padding: '1.25rem' }} />

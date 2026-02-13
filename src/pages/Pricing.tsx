@@ -112,7 +112,7 @@ const Pricing = () => {
             <section className="pricing-hero section entry-anim">
                 <div className="container-wide">
                     <div className="pricing-hero-content">
-                        <h1 className="">Simple, Transparent, Flexible.</h1>
+                        <h1 className="">Simple, <span className="text-primary">Transparent</span>, Flexible.</h1>
                         <p className="hero-description">
                             We don't build on templates or restrictive platforms. No WordPress, no Shopify.
                             Just high-performance, custom-coded solutions for serious founders.
