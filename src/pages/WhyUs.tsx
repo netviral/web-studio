@@ -8,7 +8,7 @@ const WhyUs = () => {
             <section className="hero-section section">
                 <div className="container">
                     <div className="hero-content">
-                        <h1 className="hero-title">Why Choose MVP Studio?</h1>
+                        <h1 className="hero-title">Why Choose <span className="text-primary">MVP Studio?</span></h1>
                         <p className="hero-description">
                             We're not your typical agency. Here's what makes us different.
                         </p>
@@ -51,10 +51,10 @@ const WhyUs = () => {
                                 desc: "Fixed-price projects or monthly retainers. No surprise bills, no scope creep charges."
                             }
                         ].map((reason, i) => (
-                            <div key={i} className="card p-8">
-                                <div className="text-primary mb-4">{reason.icon}</div>
-                                <h3 className="mb-3">{reason.title}</h3>
-                                <p className="text-secondary">{reason.desc}</p>
+                            <div key={i} className="feature-card-detailed">
+                                <div className="feature-icon">{reason.icon}</div>
+                                <h3>{reason.title}</h3>
+                                <p>{reason.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -63,7 +63,10 @@ const WhyUs = () => {
 
             <section className="section">
                 <div className="container">
-                    <h2 className="text-center mb-8">The MVP Studio Difference</h2>
+                    <div className="section-header text-center">
+                        <h2 className="section-title">The MVP Studio Difference</h2>
+                        <p className="section-description">A better way to build digital products.</p>
+                    </div>
                     <div className="comparison-table card p-8">
                         <div className="comparison-row header">
                             <div></div>

@@ -73,7 +73,7 @@ const Contact = () => {
                         <br />
                         <div className="hero-stats">
                             {stats.map((stat, index) => (
-                                <div key={index} className="stat-item card">
+                                <div key={index} className="card-minimal">
                                     <div className="stat-number">{stat.number}</div>
                                     <div className="stat-label">{stat.label}</div>
                                 </div>
@@ -94,9 +94,9 @@ const Contact = () => {
                     </div>
                     <div className="methods-grid grid grid-3">
                         {contactMethods.map((method, index) => (
-                            <a key={index} href={method.link} className="card method-card">
-                                <div className="method-icon">{method.icon}</div>
-                                <h3 style={{ color: 'var(--accent-primary)' }}>{method.title}</h3>
+                            <a key={index} href={method.link} className="feature-card text-center">
+                                <div className="feature-icon">{method.icon}</div>
+                                <h3>{method.title}</h3>
                                 <p>{method.value}</p>
                             </a>
                         ))}

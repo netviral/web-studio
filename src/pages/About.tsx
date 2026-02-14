@@ -20,24 +20,24 @@ const About = () => {
             <section className="section">
                 <div className="container-wide">
                     <div className="grid grid-2 gap-12">
-                        <div className="card p-8">
+                        <div className="feature-card-detailed">
                             <h2 className="mb-4">Who We Are</h2>
-                            <p className="text-secondary mb-4">
+                            <p className="mb-4">
                                 Founded by senior engineers who saw a gap in the market: traditional agencies were too slow,
                                 too expensive, and too rigid for the modern digital landscape.
                             </p>
-                            <p className="text-secondary">
+                            <p>
                                 We built MVP Studio to be different. We combine the speed of AI-assisted development
                                 with the precision of senior engineering to deliver world-class digital products in weeks, not months.
                             </p>
                         </div>
-                        <div className="card p-8">
+                        <div className="feature-card-detailed">
                             <h2 className="mb-4">What We Do</h2>
-                            <p className="text-secondary mb-4">
+                            <p className="mb-4">
                                 We build custom web applications, mobile apps, e-commerce platforms, and marketing websites
                                 for clients across healthcare, fintech, education, and beyond.
                             </p>
-                            <p className="text-secondary">
+                            <p>
                                 Every project is custom-coded, fully owned by you, and built with modern technologies
                                 that scale with your business.
                             </p>
@@ -48,7 +48,10 @@ const About = () => {
 
             <section className="section">
                 <div className="container-wide">
-                    <h2 className="text-center mb-12">Our Values</h2>
+                    <div className="section-header text-center">
+                        <h2 className="section-title">Our Values</h2>
+                        <p className="section-description">How we think, work, and deliver.</p>
+                    </div>
                     <div className="grid grid-3 gap-8">
                         {[
                             {
@@ -67,10 +70,10 @@ const About = () => {
                                 desc: "You own 100% of the code, IP, and digital assets. No vendor lock-in."
                             }
                         ].map((value, i) => (
-                            <div key={i} className="card text-center p-8">
-                                <div className="flex justify-center mb-4 text-primary">{value.icon}</div>
-                                <h3 className="mb-2">{value.title}</h3>
-                                <p className="text-secondary">{value.desc}</p>
+                            <div key={i} className="feature-card text-center">
+                                <div className="feature-icon">{value.icon}</div>
+                                <h3>{value.title}</h3>
+                                <p>{value.desc}</p>
                             </div>
                         ))}
                     </div>

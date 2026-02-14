@@ -9,9 +9,9 @@
 }
 
 .navbar.scrolled {
-    background: rgba(11, 11, 12, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--nav-bg-scrolled);
+    backdrop-filter: blur(var(--nav-blur));
+    -webkit-backdrop-filter: blur(var(--nav-blur));
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,9 +52,8 @@
     position: relative;
     color: var(--text-secondary);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    /* Reduced from 1rem */
+    font-weight: var(--weight-medium);
+    font-size: var(--nav-link-size);
     transition: color 0.2s ease;
     padding: 0.5rem 0;
 }
@@ -77,11 +76,9 @@
 }
 
 body.mega-menu-active .app>*:not(.navbar) {
-    filter: blur(14px);
-    background-color: rgba(23, 23, 23, 0.3);
-    /* Reduced from 8px for better clarity */
+    filter: blur(var(--mega-menu-blur));
+    background-color: var(--mega-menu-overlay-bg);
     opacity: 0.6;
-    /* Slight opacity reduction for the background */
     pointer-events: none;
 }
 
@@ -130,7 +127,7 @@ body.mega-menu-active .app>*:not(.navbar) {
     /* Fully remove main nav content when mobile menu is open */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
 
     .nav-links,
     .nav-cta {
@@ -160,11 +157,18 @@ body.mega-menu-active .app>*:not(.navbar) {
     }
 
     .mobile-menu-header {
+        position: sticky;
+        top: 0;
+        z-index: 2050;
+        background: var(--bg-primary);
         display: flex;
         align-items: center;
         justify-content: flex-end;
         /* Push close button to the right */
-        padding: 1rem 0;
+        padding: 1rem 1.5rem;
+        /* Add horizontal padding to match content */
+        margin: 0 -1.5rem;
+        /* Negative margin to span full width */
     }
 
     .mobile-menu-close {
@@ -182,7 +186,8 @@ body.mega-menu-active .app>*:not(.navbar) {
         /* Left align everything */
         gap: 2.5rem;
         width: 100%;
-        padding: 2rem 1.5rem;
+        padding: 0 1.5rem 2rem 1.5rem;
+        /* Removed top padding as it's handled by header */
     }
 
     /* Mobile Accordion */
@@ -197,11 +202,10 @@ body.mega-menu-active .app>*:not(.navbar) {
     .mobile-accordion-link {
         width: 100%;
         display: block;
-        font-size: 24px;
-        /* Reduced from 1.75rem (~28px) */
-        font-weight: 700;
+        font-size: var(--nav-link-mobile);
+        font-weight: var(--weight-bold);
         color: var(--text-primary);
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: var(--font-heading);
         padding: 1.25rem 0;
         text-decoration: none;
         border-bottom: 1px solid var(--border-white-05);
@@ -219,11 +223,10 @@ body.mega-menu-active .app>*:not(.navbar) {
         align-items: center;
         background: none;
         border: none;
-        font-size: 24px;
-        /* Reduced from 1.75rem */
-        font-weight: 700;
+        font-size: var(--nav-link-mobile);
+        font-weight: var(--weight-bold);
         color: var(--text-primary);
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: var(--font-heading);
         padding: 1.25rem 0;
         cursor: pointer;
         transition: color 0.2s ease;
@@ -292,13 +295,11 @@ body.mega-menu-active .app>*:not(.navbar) {
         display: flex;
         align-items: center;
         gap: 1rem;
-        font-size: 16px;
-        /* Reduced from 1.15rem (~18px) */
-        font-weight: 500;
+        font-size: var(--nav-link-sub-mobile);
+        font-weight: var(--weight-medium);
         color: var(--text-secondary);
         text-decoration: none;
         padding: 0.25rem 0 0.25rem 0.5rem;
-        /* Added left padding for nesting feel */
         transition: color 0.2s ease;
     }
 
@@ -313,12 +314,29 @@ body.mega-menu-active .app>*:not(.navbar) {
     .mobile-menu-cta {
         margin-top: 1rem;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .mobile-menu-cta .btn {
-        width: 100%;
+        width: fit-content;
+        max-width: 90%;
+        /* margin: 0 auto; Removed as flexbox handles centering */
         justify-content: center;
-        padding: 1.25rem;
+        padding: 1rem 2.5rem;
+        /* Increased horizontal padding */
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-header {
+        padding: 1rem 1rem;
+        /* Match container-wide padding on mobile */
+        margin: 0 -1rem;
+    }
+
+    .mobile-menu-content {
+        padding: 0 1rem 2rem 1rem;
     }
 }

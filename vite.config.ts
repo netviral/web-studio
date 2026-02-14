@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/web-studio/" : "/",
+export default defineConfig(({ }) => ({
+  // base: command === "build" ? "/web-studio/" : "/",
 
   plugins: [
     react({
@@ -29,7 +29,7 @@ export default defineConfig(({ command }) => ({
     chunkSizeWarningLimit: 1000,
     // Disable source maps for smaller production builds
     sourcemap: false,
-    outDir:"docs",
+    outDir:"dist",
 
   },
   // Optimize dependencies

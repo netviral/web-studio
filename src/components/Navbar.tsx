@@ -102,6 +102,7 @@ const Navbar = () => {
                         {/* Desktop Navigation */}
                         <div className="nav-links">
                             <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>Home</Link>
+                            <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>About</Link>
 
                             {/* Single Services Dropdown Trigger */}
                             <div
@@ -116,9 +117,10 @@ const Navbar = () => {
                                 </span>
                             </div>
 
-                            <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>About</Link>
                             <Link to="/why-us" className={`nav-link ${location.pathname === '/why-us' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>Why Us</Link>
                             <Link to="/portfolio" className={`nav-link ${location.pathname === '/portfolio' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>Portfolio</Link>
+                            <Link to="/pricing" className={`nav-link ${location.pathname === '/pricing' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>Plans</Link>
+                            <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} onMouseEnter={() => setMegaMenuOpen(false)}>Contact</Link>
                         </div>
 
                         <div className="nav-cta" onMouseEnter={() => setMegaMenuOpen(false)}>
@@ -163,6 +165,11 @@ const Navbar = () => {
                                     Home
                                 </Link>
 
+                                {/* About */}
+                                <Link to="/about" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
+                                    About
+                                </Link>
+
                                 {/* Services Accordion with Categories */}
                                 <div className="mobile-accordion-item">
                                     <button
@@ -198,14 +205,17 @@ const Navbar = () => {
                                 </div>
 
                                 {/* Other Links */}
-                                <Link to="/about" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
-                                    About
-                                </Link>
                                 <Link to="/why-us" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
                                     Why Us
                                 </Link>
                                 <Link to="/portfolio" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
                                     Portfolio
+                                </Link>
+                                <Link to="/pricing" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
+                                    Plans
+                                </Link>
+                                <Link to="/contact" className="mobile-accordion-link" onClick={() => setMobileOpen(false)}>
+                                    Contact
                                 </Link>
                             </div>
 

@@ -1,0 +1,106 @@
+.scroll-stage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    position: relative;
+    padding: var(--spacing-3xl) 0;
+}
+
+.scroll-stage-visual-track {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.scroll-stage-visual-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-white-05);
+    box-shadow: var(--shadow-xl);
+}
+
+.scroll-stage-visual-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-stage-visual-item.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.scroll-stage-content-track {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-step-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: var(--spacing-xl);
+}
+
+.scroll-step-text {
+    opacity: 0.2;
+    transform: translateX(20px);
+    transition: all 0.6s ease;
+    max-width: 450px;
+}
+
+.scroll-step-text.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.step-number-editorial {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--accent-primary);
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.text-relaxed {
+    font-size: 1.15rem;
+    line-height: var(--lh-relaxed);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-md);
+}
+
+@media (max-width: 968px) {
+    .scroll-stage-container {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-stage-visual-track {
+        display: none;
+        /* Simplify for mobile, or move to small icons */
+    }
+
+    .scroll-step-content {
+        height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
+    .scroll-step-text {
+        opacity: 1;
+        transform: none;
+    }
+}

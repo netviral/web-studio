@@ -176,22 +176,19 @@ const Pricing = () => {
             <section className="addons-section section entry-anim">
                 <div className="container-wide">
                     <div className="section-header text-center">
-                        <h2 className="">Custom Technical Add-ons</h2>
-                        <p className="section-description ">
+                        <h2 className="section-title">Custom Technical Add-ons</h2>
+                        <p className="section-description">
                             Deepen your market validation with specialized services designed for modern B2B and D2C startups.
                         </p>
                     </div>
 
                     <div className="addons-grid grid grid-4">
                         {addons.map((addon, index) => (
-                            <div
-                                key={index}
-                                className={`card addon-card `}
-                            >
-                                <div className="addon-icon">{addon.icon}</div>
-                                <h3>{addon.title}</h3>
-                                <div className="addon-price">{addon.price}</div>
-                                <p>{addon.description}</p>
+                            <div key={index} className="card-minimal">
+                                <div className="feature-icon mb-2">{addon.icon}</div>
+                                <h3 className="text-sm">{addon.title}</h3>
+                                <div className="addon-price text-lg">{addon.price}</div>
+                                <p className="text-xs text-center">{addon.description}</p>
                             </div>
                         ))}
                     </div>
@@ -202,8 +199,8 @@ const Pricing = () => {
             <section className="faq-section section entry-anim">
                 <div className="container-wide">
                     <div className="section-header text-center">
-                        <h2 className="">Transparency First</h2>
-                        <p className="section-description ">
+                        <h2 className="section-title">Transparency First</h2>
+                        <p className="section-description">
                             Everything you need to know about our custom build process and founder-first partnership.
                         </p>
                     </div>
@@ -212,7 +209,7 @@ const Pricing = () => {
                         {faqs.map((faq, index) => (
                             <div
                                 key={index}
-                                className={`card faq-item `}
+                                className="feature-card"
                             >
                                 <h3 className="faq-question">{faq.question}</h3>
                                 <p className="faq-answer">{faq.answer}</p>

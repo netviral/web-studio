@@ -80,9 +80,9 @@ const Portfolio = () => {
         <div className="portfolio">
             <section className="portfolio-hero section entry-anim">
                 <div className="container-wide">
-                    <div className="portfolio-hero-content">
-                        <h1>Our <span className="text-primary">Portfolio</span></h1>
-                        <p className="hero-description">
+                    <div className="section-header text-center">
+                        <h1 className="hero-title">Our <span className="text-primary">Portfolio</span></h1>
+                        <p className="section-description">
                             Explore the high-performance MVPs we've built for ambitious founders.
                             From fintech to healthtech, we deliver scalable solutions ready for market.
                         </p>
@@ -110,8 +110,8 @@ const Portfolio = () => {
                 <div className="container-wide">
                     <div className="projects-grid grid grid-3">
                         {filteredProjects.map((project) => (
-                            <div key={project.id} className="card project-card">
-                                <div className="project-image">{project.image}</div>
+                            <div key={project.id} className="feature-card-detailed">
+                                <div className="feature-icon">{project.image}</div>
                                 <div className="project-content">
                                     <h3>{project.title}</h3>
                                     <p>{project.description}</p>

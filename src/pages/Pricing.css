@@ -8,13 +8,6 @@
     margin-bottom: var(--spacing-md);
 }
 
-.section-description {
-    font-size: 1.05rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 /* Pricing Plans */
 .pricing-plans {
     padding-top: var(--spacing-2xl);
@@ -29,7 +22,6 @@
     display: flex;
     flex-direction: column;
     padding: var(--spacing-xl);
-    transition: all 0.2s ease;
 }
 
 
@@ -74,14 +66,16 @@
 .plan-price {
     display: flex;
     align-items: baseline;
-    gap: 0.25rem;
+    gap: 0.5rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+    /* Allow wrapping to prevent overflow */
 }
 
 .price {
     font-size: 3.5rem;
     font-weight: 900;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     -webkit-text-fill-color: initial;
     background: none;
     letter-spacing: -2px;
@@ -89,8 +83,11 @@
 }
 
 .period {
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
     color: var(--text-muted);
+    white-space: normal;
+    /* Allow word break if absolutely necessary */
+    line-height: 1.2;
 }
 
 .plan-description {
@@ -128,16 +125,14 @@
 }
 
 .plan-cta {
-    width: 100%;
-    margin-top: auto;
-    display: flex;
+    width: fit-content;
+    margin: auto auto 0 auto;
+    /* Center horizontally and push to bottom */
+    display: inline-flex;
     justify-content: center;
     transition: all 0.2s ease;
 }
 
-.plan-cta:hover {
-    transform: translateY(-2px);
-}
 
 /* Add-ons Section */
 .addons-section {
@@ -233,6 +228,13 @@
 }
 
 /* Responsive */
+@media (max-width: 1250px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
 @media (max-width: 968px) {
     .pricing-card.popular {
         transform: scale(1);
