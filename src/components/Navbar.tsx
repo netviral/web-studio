@@ -96,7 +96,7 @@ const Navbar = () => {
                     <div className="navbar-content">
                         <Link to="/" className="logo" onMouseEnter={() => setMegaMenuOpen(false)}>
                             <Rocket size={24} className="logo-accent" />
-                            <span className="logo-text">MVP<span className="logo-accent">Studio</span></span>
+                            <span className="logo-text">Meta<span className="logo-accent">Launch</span></span>
                         </Link>
 
                         {/* Desktop Navigation */}

@@ -1,5 +1,11 @@
+.template-page .hero-section {
+    padding-top: calc(var(--spacing-3xl) + 60px);
+    text-align: center;
+}
+
 .template-page {
-    padding-top: 80px;
+    /* Padding handled by hero-section */
+    padding-top: 0;
 }
 
 .template-icon-wrapper {

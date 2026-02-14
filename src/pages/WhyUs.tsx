@@ -8,7 +8,7 @@ const WhyUs = () => {
             <section className="hero-section section">
                 <div className="container">
                     <div className="hero-content">
-                        <h1 className="hero-title">Why Choose <span className="text-primary">MVP Studio?</span></h1>
+                        <h1 className="hero-title">Why Choose Meta<span className="text-primary">Launch?</span></h1>
                         <p className="hero-description">
                             We're not your typical agency. Here's what makes us different.
                         </p>
@@ -64,14 +64,14 @@ const WhyUs = () => {
             <section className="section">
                 <div className="container">
                     <div className="section-header text-center">
-                        <h2 className="section-title">The MVP Studio Difference</h2>
+                        <h2 className="section-title">The MetaLaunch Labs Difference</h2>
                         <p className="section-description">A better way to build digital products.</p>
                     </div>
                     <div className="comparison-table card p-8">
                         <div className="comparison-row header">
                             <div></div>
                             <div>Traditional Agencies</div>
-                            <div>MVP Studio</div>
+                            <div>Meta<span className="text-primary">Launch</span></div>
                         </div>
                         {[
                             { feature: "Timeline", them: "3-6 months", us: "2-4 weeks" },

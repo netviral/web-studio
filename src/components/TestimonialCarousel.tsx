@@ -2,7 +2,7 @@ import { memo } from 'react';
 import './TestimonialCarousel.css';
 
 const testimonials = [
-    { name: "John Doe", role: "CEO @ TechFlow", text: "Amazing experience working with MVP Studio. They delivered our MVP in record time.", avatar: "JD" },
+    { name: "John Doe", role: "CEO @ TechFlow", text: "Amazing experience working with MetaLaunch Labs. They delivered our MVP in record time.", avatar: "JD" },
     { name: "Sarah Smith", role: "Founder @ NextGen", text: "Professional, fast, and extremely talented. Highly recommended for any startup.", avatar: "SS" },
     { name: "Mike Johnson", role: "CTO @ DataScale", text: "The quality of code and design is top-notch. They truly are technical co-founders.", avatar: "MJ" },
     { name: "Alex Lee", role: "Product Manager @ GlobalSync", text: "The best investment we made for our early-stage development.", avatar: "AL" },

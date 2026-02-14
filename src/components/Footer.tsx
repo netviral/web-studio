@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="footer-brand">
                         <Link to="/" className="logo">
                             <Rocket size={24} className="logo-accent" />
-                            <span className="logo-text">MVP<span className="logo-accent">Studio</span></span>
+                            <span className="logo-text">Meta<span className="logo-accent">Launch</span> Labs</span>
                         </Link>
                         <p className="footer-tagline">
                             Architecting the next generation of digital excellence.
@@ -63,10 +63,10 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} MVP Studio. All rights reserved.</p>
+                    <p>&copy; {currentYear} MetaLaunch Labs. All rights reserved.</p>
                     <div className="footer-contact-link">
                         <Mail size={16} />
-                        <a href="mailto:hello@mvpstudio.com">hello@mvpstudio.com</a>
+                        <a href="mailto:hello@metalaunchlabs.com">hello@metalaunchlabs.com</a>
                     </div>
                 </div>
             </div>

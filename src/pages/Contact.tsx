@@ -6,8 +6,8 @@ const contactMethods = [
     {
         icon: <Mail size={32} className="text-secondary" />,
         title: 'Email Us',
-        value: 'hello@mvpstudio.com',
-        link: 'mailto:hello@mvpstudio.com',
+        value: 'hello@metalaunchlabs.com',
+        link: 'mailto:hello@metalaunchlabs.com',
     },
     {
         icon: <MessageSquare size={32} className="text-secondary" />,

@@ -8,7 +8,7 @@ const About = () => {
             <section className="hero-section section">
                 <div className="container">
                     <div className="hero-content">
-                        <h1 className="hero-title">About MVP Studio</h1>
+                        <h1 className="hero-title">About Meta<span className="text-primary">Launch</span> Labs</h1>
                         <p className="hero-description">
                             We are a full-service digital product studio specializing in rapid development
                             for founders, scale-ups, and agencies.
@@ -27,7 +27,7 @@ const About = () => {
                                 too expensive, and too rigid for the modern digital landscape.
                             </p>
                             <p>
-                                We built MVP Studio to be different. We combine the speed of AI-assisted development
+                                We built MetaLaunch Labs to be different. We combine the speed of AI-assisted development
                                 with the precision of senior engineering to deliver world-class digital products in weeks, not months.
                             </p>
                         </div>

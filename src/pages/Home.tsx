@@ -246,12 +246,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* The MVP Studio Standard - Scrollytelling Section */}
+            {/* The MetaLaunch Labs Standard - Scrollytelling Section */}
             <section className="section entry-anim">
                 <div className="container-wide">
                     <div className="section-header text-center mb-0">
                         <span className="hero-badge-minimal mb-4">Our Methodology</span>
-                        <h2 className="section-title text-display">The MVP Studio <span className="text-serif">Standard</span></h2>
+                        <h2 className="section-title text-display">The MetaLaunch Labs <span className="text-serif">Standard</span></h2>
                         <p className="section-description mx-auto">
                             Beyond conventional code. We architect systems for resilience and scale.
                         </p>
