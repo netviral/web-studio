@@ -143,17 +143,36 @@ body.mega-menu-active .app>*:not(.navbar) {
         /* Push to the right */
     }
 
+    .navbar-content {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .mobile-menu-overlay {
         position: fixed;
         /* Keep it fixed to handle scrolling internally */
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
+        /* Use dvh for better mobile support */
         background: var(--bg-primary);
         z-index: 2000;
         overflow-y: auto;
         overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+        overscroll-behavior: contain;
+        /* Prevent scroll chaining */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-overlay .container-wide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .mobile-menu-header {
@@ -186,8 +205,10 @@ body.mega-menu-active .app>*:not(.navbar) {
         /* Left align everything */
         gap: 2.5rem;
         width: 100%;
-        padding: 0 1.5rem 2rem 1.5rem;
-        /* Removed top padding as it's handled by header */
+        padding: 0 1.5rem 6rem 1.5rem;
+        /* Increased padding-bottom significantly */
+        flex: 1;
+        /* Allow content to grow and be scrollable */
     }
 
     /* Mobile Accordion */
@@ -337,6 +358,7 @@ body.mega-menu-active .app>*:not(.navbar) {
     }
 
     .mobile-menu-content {
-        padding: 0 1rem 2rem 1rem;
+        padding: 0 1rem 6rem 1rem;
+        /* Match increased bottom padding */
     }
 }

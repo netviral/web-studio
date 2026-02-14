@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
+import Home from './pages/Home';
+
 // Lazy load pages for code splitting
-const Home = lazy(() => import('./pages/Home'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Contact = lazy(() => import('./pages/Contact'));

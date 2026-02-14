@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
+  color-scheme: dark;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-serif: 'Instrument Serif', serif;
@@ -68,7 +69,7 @@
   --bg-site-gradient-end: #0b0b0c;
 
   --site-background:
-    radial-gradient(circle at 50% -30%, #3a3a42 0%, #161618 45%, #0b0b0c 75%) fixed;
+    radial-gradient(circle at 50% -30%, #3a3a42 0%, #161618 45%, #0b0b0c 75%);
 
 
   /* ============================================
@@ -249,9 +250,8 @@ body {
 }
 
 html {
-  /* Move background here so body::before can sit on top of it */
-  background: var(--site-background);
-  background-size: cover;
+  /* Set base background color, gradient moved to fixed layer */
+  background-color: var(--bg-deep);
 }
 
 body {
@@ -265,6 +265,7 @@ body {
 }
 
 /* Global Grid Background - Controlled by variables in :root */
+/* Global Background Layer */
 body::before {
   content: '';
   position: fixed;
@@ -272,15 +273,27 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* 
-     This uses CSS linear gradients to draw the lines. 
-     It is much more reliable than SVGs for responding to variables.
-  */
+  background: var(--site-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Global Grid Pattern Layer */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image:
     linear-gradient(to right, var(--grid-pattern-color) var(--grid-pattern-stroke-width), transparent var(--grid-pattern-stroke-width)),
     linear-gradient(to bottom, var(--grid-pattern-color) var(--grid-pattern-stroke-width), transparent var(--grid-pattern-stroke-width));
   background-size: 40px 40px;
   opacity: var(--grid-pattern-opacity);
+  /* Restore original low opacity */
   z-index: -1;
   pointer-events: none;
 }
